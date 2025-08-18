@@ -1,0 +1,23 @@
+{
+  "date": "2025-08-20",
+  "topic": "On the Bus",
+  "story": [
+    { "image": "1.svg", "en": "We wait for the bus.", "cn": "我们等公交。" },
+    { "image": "2.svg", "en": "The bus is yellow.", "cn": "公交车是黄色的。" },
+    { "image": "3.svg", "en": "I sit near the window.", "cn": "我坐在窗边。" }
+  ],
+  "sentences_of_the_day": [
+    "We wait for the bus.",
+    "The bus is yellow.",
+    "I sit near the window."
+  ],
+  "keywords": [
+    { "en": "bus", "cn": "公交车" },
+    { "en": "yellow", "cn": "黄色" },
+    { "en": "window", "cn": "窗" }
+  ],
+  "quiz": [
+    { "type": "mc", "q": "What color is the bus?", "options": ["yellow","red","black"], "answer": "yellow" },
+    { "type": "repeat", "text": "The bus is yellow." }
+  ]
+}

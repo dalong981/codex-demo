@@ -1,0 +1,23 @@
+{
+  "date": "2025-08-18",
+  "topic": "At the Park",
+  "story": [
+    { "image": "1.svg", "en": "I see a red kite.", "cn": "我看到一只红色的风筝。" },
+    { "image": "2.svg", "en": "The kite flies high.", "cn": "风筝飞得很高。" },
+    { "image": "3.svg", "en": "Dad holds the string.", "cn": "爸爸握着线。" }
+  ],
+  "sentences_of_the_day": [
+    "I see a red kite.",
+    "The kite flies high.",
+    "Dad holds the string."
+  ],
+  "keywords": [
+    { "en": "kite", "cn": "风筝" },
+    { "en": "string", "cn": "线" },
+    { "en": "flies", "cn": "飞行/飞" }
+  ],
+  "quiz": [
+    { "type": "mc", "q": "What color is the kite?", "options": ["blue","red","green"], "answer": "red" },
+    { "type": "repeat", "text": "I see a red kite." }
+  ]
+}
