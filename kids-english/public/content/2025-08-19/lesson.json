@@ -1,0 +1,23 @@
+{
+  "date": "2025-08-19",
+  "topic": "In the Kitchen",
+  "story": [
+    { "image": "1.svg", "en": "I wash an apple.", "cn": "我洗一个苹果。" },
+    { "image": "2.svg", "en": "The apple is sweet.", "cn": "苹果很甜。" },
+    { "image": "3.svg", "en": "Mom cuts the cake.", "cn": "妈妈切蛋糕。" }
+  ],
+  "sentences_of_the_day": [
+    "I wash an apple.",
+    "The apple is sweet.",
+    "Mom cuts the cake."
+  ],
+  "keywords": [
+    { "en": "apple", "cn": "苹果" },
+    { "en": "sweet", "cn": "甜" },
+    { "en": "cuts", "cn": "切" }
+  ],
+  "quiz": [
+    { "type": "mc", "q": "What does mom cut?", "options": ["bread","cake","apple"], "answer": "cake" },
+    { "type": "repeat", "text": "I wash an apple." }
+  ]
+}
