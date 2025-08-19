@@ -30,10 +30,13 @@ const dailyStories = [
 
 let currentDayIndex = 0;
 
+let showTranslations = false;
+
 const imageEl = document.getElementById('story-image');
 const textContainer = document.getElementById('story-text-container');
 const prevBtn = document.getElementById('prev-day-btn');
 const nextBtn = document.getElementById('next-day-btn');
+const toggleBtn = document.getElementById('toggle-translations-btn');
 
 function renderStory(index) {
   const story = dailyStories[index];
@@ -45,11 +48,19 @@ function renderStory(index) {
     p.textContent = sentence.en;
     textContainer.appendChild(p);
 
+    const cn = document.createElement('p');
+    cn.textContent = sentence.cn;
+    cn.className = 'translation';
+    cn.style.display = showTranslations ? 'block' : 'none';
+    textContainer.appendChild(cn);
+
     let pressTimer;
 
     p.addEventListener('mousedown', () => {
       pressTimer = setTimeout(() => {
-        alert(sentence.cn);
+        if (!showTranslations) {
+          alert(sentence.cn);
+        }
         p.dataset.longPress = 'true';
       }, 800);
     });
@@ -64,7 +75,9 @@ function renderStory(index) {
         return;
       }
       if (p.dataset.clicked === 'true') {
-        alert(sentence.cn);
+        if (!showTranslations) {
+          alert(sentence.cn);
+        }
         p.dataset.clicked = 'false';
       } else {
         const utterance = new SpeechSynthesisUtterance(sentence.en);
@@ -90,6 +103,12 @@ nextBtn.addEventListener('click', () => {
     currentDayIndex++;
     renderStory(currentDayIndex);
   }
+});
+
+toggleBtn.addEventListener('click', () => {
+  showTranslations = !showTranslations;
+  toggleBtn.textContent = showTranslations ? 'Hide Translations' : 'Show Translations';
+  renderStory(currentDayIndex);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
